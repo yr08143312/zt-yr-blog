@@ -24,8 +24,7 @@ public class SwaggerConfig {
                 .build();
     }
 
-
-    @Bean
+    /*@Bean
     public Docket systemApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -45,62 +44,20 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.baseinfo"))
                 .paths(PathSelectors.any())
                 .build();
-    }
+    }*/
 
     @Bean
-    public Docket userAuthApi() {
+    public Docket baseInfoApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
-                .groupName("IPP - 权限管理")
+                .groupName("访客页")
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.auth"))
+                .apis(RequestHandlerSelectors.basePackage("xyz.yangrui.ztyrblog.controller.visitor"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
-    @Bean
-    public Docket settlementApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .groupName("IPP - 结算管理")
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.settlement"))
-                .paths(PathSelectors.any())
-                .build();
-    }
 
-    @Bean
-    public Docket commodityManageApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .groupName("IPP - 商品管理")
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.commodity"))
-                .paths(PathSelectors.any())
-                .build();
-    }
-
-    @Bean
-    public Docket orderManageApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .groupName("IPP - 订单管理")
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.order"))
-                .paths(PathSelectors.any())
-                .build();
-    }
-
-    @Bean
-    public Docket businessManageApi() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .groupName("IPP - 商家管理")
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.crecgec.web.controller.business"))
-                .paths(PathSelectors.any())
-                .build();
-    }
 }
 
 

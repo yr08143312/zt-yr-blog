@@ -40,8 +40,9 @@ import java.util.List;
  * Created by Administrator on 2017/3/8 008.
  */
 @Controller
-public class IndexController extends BaseController {
-    private static final Logger LOGGER = LoggerFactory.getLogger(IndexController.class);
+@RequestMapping("oldvisitor")
+public class OldIndexController extends BaseController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(OldIndexController.class);
 
     @Resource
     private IContentService contentService;
