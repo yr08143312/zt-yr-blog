@@ -1,15 +1,15 @@
 package xyz.yangrui.ztyrblog.dao;
 
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.modal.Bo.ArchiveBo;
 import xyz.yangrui.ztyrblog.modal.Vo.ContentVo;
 import xyz.yangrui.ztyrblog.modal.Vo.ContentVoExample;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface ContentVoMapper {
     long countByExample(ContentVoExample example);
 

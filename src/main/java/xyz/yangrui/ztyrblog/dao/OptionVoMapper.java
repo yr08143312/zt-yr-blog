@@ -1,13 +1,13 @@
 package xyz.yangrui.ztyrblog.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.modal.Vo.OptionVo;
 import xyz.yangrui.ztyrblog.modal.Vo.OptionVoExample;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface OptionVoMapper {
     long countByExample(OptionVoExample example);
 

@@ -1,13 +1,13 @@
 package xyz.yangrui.ztyrblog.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.modal.Vo.AttachVo;
 import xyz.yangrui.ztyrblog.modal.Vo.AttachVoExample;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface AttachVoMapper {
     long countByExample(AttachVoExample example);
 

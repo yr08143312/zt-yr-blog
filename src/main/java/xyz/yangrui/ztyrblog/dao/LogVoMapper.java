@@ -1,5 +1,6 @@
 package xyz.yangrui.ztyrblog.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.modal.Vo.LogVo;
@@ -7,7 +8,7 @@ import xyz.yangrui.ztyrblog.modal.Vo.LogVoExample;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface LogVoMapper {
     long countByExample(LogVoExample example);
 

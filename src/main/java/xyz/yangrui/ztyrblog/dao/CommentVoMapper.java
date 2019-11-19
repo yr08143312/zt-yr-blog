@@ -1,6 +1,7 @@
 package xyz.yangrui.ztyrblog.dao;
 
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.modal.Vo.CommentVo;
@@ -8,7 +9,7 @@ import xyz.yangrui.ztyrblog.modal.Vo.CommentVoExample;
 
 import java.util.List;
 
-@Component
+@Mapper
 public interface CommentVoMapper {
     long countByExample(CommentVoExample example);
 

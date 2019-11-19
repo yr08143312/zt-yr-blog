@@ -1,5 +1,6 @@
 package xyz.yangrui.ztyrblog.dao;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import xyz.yangrui.ztyrblog.dto.MetaDto;
@@ -9,7 +10,7 @@ import xyz.yangrui.ztyrblog.modal.Vo.MetaVoExample;
 import java.util.List;
 import java.util.Map;
 
-@Component
+@Mapper
 public interface MetaVoMapper {
     long countByExample(MetaVoExample example);
 
