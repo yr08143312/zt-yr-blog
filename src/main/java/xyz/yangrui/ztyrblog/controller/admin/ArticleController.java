@@ -2,6 +2,11 @@ package xyz.yangrui.ztyrblog.controller.admin;
 
 
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 import xyz.yangrui.ztyrblog.controller.BaseController;
 import xyz.yangrui.ztyrblog.dto.LogActions;
 import xyz.yangrui.ztyrblog.dto.Types;
@@ -14,12 +19,6 @@ import xyz.yangrui.ztyrblog.modal.Vo.UserVo;
 import xyz.yangrui.ztyrblog.service.IContentService;
 import xyz.yangrui.ztyrblog.service.ILogService;
 import xyz.yangrui.ztyrblog.service.IMetaService;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +27,7 @@ import java.util.List;
 /**
  *
  */
-@Controller
+@RestController
 @RequestMapping("/admin/article")
 @Transactional(rollbackFor = TipException.class)
 public class ArticleController extends BaseController {

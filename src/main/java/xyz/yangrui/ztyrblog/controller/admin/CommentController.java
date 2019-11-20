@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by 13 on 2017/2/26.
  */
-@Controller
+@RestController
 @RequestMapping("admin/comments")
 public class CommentController extends BaseController {
 

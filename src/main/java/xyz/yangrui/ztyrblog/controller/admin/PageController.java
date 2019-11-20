@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by 13 on 2017/2/21.
  */
-@Controller()
+@RestController
 @RequestMapping("admin/page")
 public class PageController extends BaseController {
 

@@ -20,7 +20,7 @@ import java.util.List;
 /**
  *
  */
-@Controller
+@RestController
 @RequestMapping("admin/category")
 public class CategoryController extends BaseController {
 

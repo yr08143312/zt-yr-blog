@@ -33,7 +33,7 @@ import java.util.List;
  * 附件管理
  *
  */
-@Controller
+@RestController
 @RequestMapping("admin/attach")
 public class AttachController extends BaseController {
 

@@ -1,5 +1,10 @@
 package xyz.yangrui.ztyrblog.controller.admin;
 
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 import xyz.yangrui.ztyrblog.constant.WebConst;
 import xyz.yangrui.ztyrblog.controller.BaseController;
 import xyz.yangrui.ztyrblog.dto.LogActions;
@@ -11,12 +16,6 @@ import xyz.yangrui.ztyrblog.service.ILogService;
 import xyz.yangrui.ztyrblog.service.IOptionService;
 import xyz.yangrui.ztyrblog.service.ISiteService;
 import xyz.yangrui.ztyrblog.utils.GsonUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -27,7 +26,7 @@ import java.util.Map;
 /**
  * Created by wangq on 2017/3/20.
  */
-@Controller
+@RestController
 @RequestMapping("/admin/setting")
 public class SettingController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SettingController.class);

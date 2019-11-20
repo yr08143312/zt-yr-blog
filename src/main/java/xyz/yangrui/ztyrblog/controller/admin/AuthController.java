@@ -28,7 +28,7 @@ import java.io.IOException;
  * 用户后台登录/登出
  * Created by BlueT on 2017/3/11.
  */
-@Controller
+@RestController
 @RequestMapping("/admin")
 @Transactional(rollbackFor = TipException.class)
 public class AuthController extends BaseController {
