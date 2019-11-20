@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by wangq on 2017/3/20.
+ * Created by yangrui on 2019/11/20.
  */
 @RestController
 @RequestMapping("/admin/setting")

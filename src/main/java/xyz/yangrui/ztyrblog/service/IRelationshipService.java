@@ -5,7 +5,7 @@ import xyz.yangrui.ztyrblog.modal.Vo.RelationshipVoKey;
 import java.util.List;
 
 /**
- * Created by BlueT on 2017/3/18.
+ * Created by yangrui on 2019/3/18.
  */
 public interface IRelationshipService {
     /**

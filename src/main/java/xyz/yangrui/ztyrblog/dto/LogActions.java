@@ -2,7 +2,7 @@ package xyz.yangrui.ztyrblog.dto;
 
 /**
  * 日志表的action字段
- * Created by BlueT on 2017/3/4.
+ * Created by yangrui on 2019/3/4.
  */
 public enum LogActions {
 

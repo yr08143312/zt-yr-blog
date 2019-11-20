@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import xyz.yangrui.ztyrblog.exception.TipException;
 
 /**
- * Created by BlueT on 2017/3/4.
+ * Created by yangrui on 2019/3/4.
  */
 @ControllerAdvice
 public class GlobalExceptionHandler {

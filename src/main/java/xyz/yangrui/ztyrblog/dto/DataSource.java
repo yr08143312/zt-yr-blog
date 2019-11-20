@@ -2,7 +2,7 @@ package xyz.yangrui.ztyrblog.dto;
 
 /**
  * 建立数据库连接的参数对象
- * Created by BlueT on 2017/3/4.
+ * Created by yangrui on 2019/3/4.
  */
 public class DataSource {
 

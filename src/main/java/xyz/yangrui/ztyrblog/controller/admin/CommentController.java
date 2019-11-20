@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by 13 on 2017/2/26.
+ * Created by yangrui on 2019/11/20.
  */
 @RestController
 @RequestMapping("admin/comments")

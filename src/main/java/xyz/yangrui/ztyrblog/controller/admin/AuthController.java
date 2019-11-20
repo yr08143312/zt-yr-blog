@@ -3,7 +3,6 @@ package xyz.yangrui.ztyrblog.controller.admin;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import xyz.yangrui.ztyrblog.constant.WebConst;
@@ -26,7 +25,7 @@ import java.io.IOException;
 
 /**
  * 用户后台登录/登出
- * Created by BlueT on 2017/3/11.
+ * Created by yangrui on 2019/3/11.
  */
 @RestController
 @RequestMapping("/admin")

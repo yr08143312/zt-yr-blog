@@ -3,7 +3,6 @@ package xyz.yangrui.ztyrblog.controller.admin;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import xyz.yangrui.ztyrblog.constant.WebConst;
@@ -22,7 +21,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by 13 on 2017/2/21.
+ * Created by yangrui on 2019/11/20.
  */
 @RestController
 @RequestMapping("admin/page")

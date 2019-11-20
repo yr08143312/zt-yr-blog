@@ -6,7 +6,7 @@ import xyz.yangrui.ztyrblog.modal.Vo.CommentVo;
 import xyz.yangrui.ztyrblog.modal.Vo.CommentVoExample;
 
 /**
- * Created by BlueT on 2017/3/16.
+ * Created by yangrui on 2019/3/16.
  */
 public interface ICommentService {
 
