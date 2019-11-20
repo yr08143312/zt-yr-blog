@@ -3,6 +3,7 @@ package xyz.yangrui.ztyrblog.controller.admin;
 import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ import java.util.List;
  * 附件管理
  * Created by yangrui on 2019/11/20.
  */
-@RestController
+@Controller
 @RequestMapping("admin/attach")
 public class AttachController extends BaseController {
 

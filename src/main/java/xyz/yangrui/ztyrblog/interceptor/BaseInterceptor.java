@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import xyz.yangrui.ztyrblog.constant.WebConst;
+import xyz.yangrui.ztyrblog.dto.Types;
+import xyz.yangrui.ztyrblog.modal.Vo.UserVo;
 import xyz.yangrui.ztyrblog.service.IUserService;
-import xyz.yangrui.ztyrblog.utils.AdminCommons;
-import xyz.yangrui.ztyrblog.utils.Commons;
-import xyz.yangrui.ztyrblog.utils.IPKit;
-import xyz.yangrui.ztyrblog.utils.MapCache;
+import xyz.yangrui.ztyrblog.utils.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +44,7 @@ public class BaseInterceptor implements HandlerInterceptor {
         LOGGE.info("用户访问地址: {}, 来路地址: {}", uri, IPKit.getIpAddrByRequest(request));
 
 
-        /*//请求拦截处理
+        //请求拦截处理
         UserVo user = TaleUtils.getLoginUser(request);
         if (null == user) {
             Integer uid = TaleUtils.getCookieUid(request);
@@ -54,7 +54,7 @@ public class BaseInterceptor implements HandlerInterceptor {
                 request.getSession().setAttribute(WebConst.LOGIN_SESSION_KEY, user);
             }
         }
-        if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
+        if (uri.contains("/admin") && !uri.endsWith("/admin/login") && null == user) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
             return false;
         }
@@ -64,7 +64,7 @@ public class BaseInterceptor implements HandlerInterceptor {
             // 默认存储30分钟
             cache.hset(Types.CSRF_TOKEN.getType(), csrf_token, uri, 30 * 60);
             request.setAttribute("_csrf_token", csrf_token);
-        }*/
+        }
         return true;
     }
 

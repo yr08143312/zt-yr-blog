@@ -3,6 +3,7 @@ package xyz.yangrui.ztyrblog.controller.admin;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import xyz.yangrui.ztyrblog.constant.WebConst;
@@ -30,7 +31,7 @@ import java.util.List;
  * 后台管理首页
  * Created by yangrui on 2019/11/20.
  */
-@RestController("adminIndexController")
+@Controller("adminIndexController")
 @RequestMapping("/admin")
 @Transactional(rollbackFor = TipException.class)
 public class IndexController extends BaseController {
