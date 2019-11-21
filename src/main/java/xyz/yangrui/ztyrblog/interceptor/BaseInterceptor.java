@@ -2,7 +2,7 @@ package xyz.yangrui.ztyrblog.interceptor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import xyz.yangrui.ztyrblog.constant.WebConst;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * 自定义拦截器
  * Created by yangrui on 2019/3/9.
  */
-@Component
+@Configuration
 public class BaseInterceptor implements HandlerInterceptor {
     private static final Logger LOGGE = LoggerFactory.getLogger(BaseInterceptor.class);
     private static final String USER_AGENT = "user-agent";
@@ -55,7 +55,7 @@ public class BaseInterceptor implements HandlerInterceptor {
             }
         }
 
-        if (uri.startsWith("/admin") && !uri.startsWith("/admin/login") && null == user) {
+        if (null == user) {
             response.sendRedirect(request.getContextPath() + "/admin/login");
             return false;
         }
@@ -71,7 +71,8 @@ public class BaseInterceptor implements HandlerInterceptor {
 
     @Override
     public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        httpServletRequest.setAttribute("commons", commons);//一些工具类和公共方法
+        //一些工具类和公共方法
+        httpServletRequest.setAttribute("commons", commons);
         httpServletRequest.setAttribute("adminCommons", adminCommons);
     }
 

@@ -1,16 +1,13 @@
 package xyz.yangrui.ztyrblog.interceptor;
 
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import xyz.yangrui.ztyrblog.utils.TaleUtils;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 向mvc中添加自定义组件
@@ -21,14 +18,12 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Resource
     private BaseInterceptor baseInterceptor;
 
-    @Value("{'${exclude.intercept.path}'.split(',')}")
-    private List<String> excludeInterceptPaths;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        InterceptorRegistration interceptorRegistration = registry.addInterceptor(baseInterceptor);
-        interceptorRegistration.excludePathPatterns(excludeInterceptPaths);
-        interceptorRegistration.addPathPatterns("/**");
+        registry.addInterceptor(baseInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/error","/admin/login","/fuckBolg/**","/*/css/**","/*/images/**","/*/js/**","/*/plugins/**");
     }
 
     /**
@@ -38,12 +33,12 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
-        //registry.addResourceHandler("/upload/**").addResourceLocations("file:"+ TaleUtils.getUplodFilePath()+"upload/");
         // 解决swagger无法访问
         registry.addResourceHandler("/swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         // 解决swagger的js文件无法访问
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         registry.addResourceHandler("/upload/**").addResourceLocations("file:"+ TaleUtils.getUplodFilePath()+"upload/");
+        registry.addResourceHandler("/*/css/**","/*/images/**","/*/js/**","/*/plugins/**").addResourceLocations("classpath:/static/");
         super.addResourceHandlers(registry);
     }
 }
