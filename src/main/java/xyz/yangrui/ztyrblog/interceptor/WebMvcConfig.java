@@ -1,13 +1,16 @@
 package xyz.yangrui.ztyrblog.interceptor;
 
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import xyz.yangrui.ztyrblog.utils.TaleUtils;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 向mvc中添加自定义组件
@@ -17,9 +20,15 @@ import javax.annotation.Resource;
 public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Resource
     private BaseInterceptor baseInterceptor;
+
+    @Value("{'${exclude.intercept.path}'.split(',')}")
+    private List<String> excludeInterceptPaths;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(baseInterceptor);
+        InterceptorRegistration interceptorRegistration = registry.addInterceptor(baseInterceptor);
+        interceptorRegistration.excludePathPatterns(excludeInterceptPaths);
+        interceptorRegistration.addPathPatterns("/**");
     }
 
     /**
