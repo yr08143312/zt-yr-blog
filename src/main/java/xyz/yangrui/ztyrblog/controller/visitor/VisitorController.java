@@ -33,7 +33,7 @@ import javax.servlet.http.HttpSession;
 import java.net.URLEncoder;
 
 @RestController
-@RequestMapping("fuckBolg")
+@RequestMapping("/fuckBlog")
 @Api(tags = "访客界面", description = "访客界面相关接口")
 public class VisitorController {
     private static final Logger LOGGER = LoggerFactory.getLogger(VisitorController.class);

@@ -18,12 +18,11 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Resource
     private BaseInterceptor baseInterceptor;
 
-
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(baseInterceptor)
                 .addPathPatterns("/**")
-                .excludePathPatterns("/error","/admin/login","/fuckBolg/**","/*/css/**","/*/images/**","/*/js/**","/*/plugins/**");
+                .excludePathPatterns("/error","/admin/login","/fuckBlog/**","/*/css/**","/*/images/**","/*/js/**","/*/plugins/**","/swagger-ui.html","/swagger-resources/**","/webjars/**","/upload/**");
     }
 
     /**
