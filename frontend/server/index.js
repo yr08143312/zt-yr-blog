@@ -72,7 +72,7 @@ router.get('*', async(ctx, next) => {
     ctx.type = 'html';
     const s = Date.now();
     let context = {
-        title: 'FuckerBlog',
+        title: 'DryManBlog',
         url: req.url,
         renderURLScript: (type) => {
             if (config[type].url !== '') {
