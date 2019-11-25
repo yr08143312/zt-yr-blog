@@ -28,7 +28,7 @@ export function createRouter() {
     if (typeof window !== 'undefined') {
         router.afterEach((to, from) => {
             if (document && !(/\/article\//g.test(to.path))) {
-                document.querySelector('title').innerText = 'FuckBlog';
+                document.querySelector('title').innerText = 'DryMan';
             }
         });
     }

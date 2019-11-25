@@ -11,7 +11,8 @@
             </transition>
         </div>
         <footer class="footer">
-            <p>Copyright © <a href='https://github.com/yr08143312/zt-yr-blog'>Fucker</a>&nbsp;&nbsp;2019 </p>
+            <p>Copyright © <a href='https://github.com/yr08143312/zt-yr-blog'>DryMan</a>&nbsp;&nbsp;2019 </p>
+            <a href='http://www.beian.miit.gov.cn/'>蜀ICP备19035938号</a>
             <p>Created by <a href="https://github.com/yr08143312/zt-yr-blog">vue-blog</a></p>
         </footer>
         <!-- 防止disqus导致首页报错 -->
