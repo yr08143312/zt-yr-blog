@@ -14,9 +14,8 @@
             <p>Copyright © <a href='https://github.com/yr08143312/zt-yr-blog'>DryMan</a>&nbsp;&nbsp;2019 </p>
             <p>Created by <a href="https://github.com/yr08143312/zt-yr-blog">vue-blog</a></p>
             <a href='http://www.beian.miit.gov.cn/'>蜀ICP备19035938号</a>
-            <img src="http://www.yangrui.xyz/upload/2019/11/ro90aan9dmjifqh2d1tp8klsuj.png">
             <div style="width:300px;margin:0 auto; padding:20px 0;">
-                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012402000414" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012402000414号</p></a>
+                <img src="http://www.yangrui.xyz/upload/2019/11/ro90aan9dmjifqh2d1tp8klsuj.png"><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=51012402000414" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">川公网安备 51012402000414号</p></a>
             </div>
         </footer>
         <!-- 防止disqus导致首页报错 -->
