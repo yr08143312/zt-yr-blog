@@ -35,7 +35,7 @@
     "mongoose": "^4.9.3",
     "require-dir": "^0.3.2",
     "simplemde": "^1.11.2",
-    "ssri": "^5.2.2",
+    "ssri": "^8.0.1",
     "strip-ansi": "3.0.1",
     "vue": "^2.3.0",
     "vue-router": "^2.5.2",
