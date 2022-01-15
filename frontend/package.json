@@ -29,7 +29,7 @@
     "koa-router": "^7.1.1",
     "koa-static": "^3.0.0",
     "lru-cache": "^4.0.2",
-    "marked": "^0.3.6",
+    "marked": "^4.0.10",
     "md5": "^2.2.1",
     "moment": "^2.18.1",
     "mongoose": "^4.9.3",
